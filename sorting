@@ -1,0 +1,37 @@
+def countFrequency(string ,  ch) :
+ 
+    count = 0;
+ 
+    for i in range(len(string)) :
+ 
+    
+        if (string[i] == ch) :
+            count += 1;
+ 
+    return count;
+ 
+
+def sortArr(string) :
+    n = len(string);
+ 
+    
+    vp = [];
+ 
+    
+    for i in range(n) :
+ 
+        vp.append((countFrequency(string, string[i]), string[i]));
+         
+    
+    vp.sort();
+     
+    
+    for i in range(len(vp)) :
+        print(vp[i][1],end="");
+ 
+
+if __name__ == "__main__" :
+ 
+    string = "geeksforgeeks";
+ 
+    sortArr(string);
